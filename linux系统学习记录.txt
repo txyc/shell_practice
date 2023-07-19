@@ -402,8 +402,6 @@ awk [选项参数] 'script' var=value file(s)
 或
 awk [选项参数] -f scriptfile var=value file(s)
 
-
-
 2、wc
 wc [-clw] filename
 -c -> 只显示Bytes数
@@ -429,3 +427,36 @@ f -> 表示var_name为函数
 n -> 接触变量的引用
 p -> 列出所有shell赋予程序的环境变量
 
+6、nohup
+# no hang up的缩写，用于在后台不挂断地运行命令，默认情况下会输出一个名为nohup.out的文件到当前目录
+nohup Command [args] &
+
+# #############################################
+# 时间：20230717
+# 姓名：田鑫
+# 电话：18384121601
+# 邮箱：965622832@qq.com
+# #############################################
+八、linux下stress工具的使用说明
+
+1、stress简介
+stress工具主要用于模拟拉伸系统负载的场景，常用于模拟测试系统处于高CPU、高内存开销等情况下的系统性能
+
+2、语法和参数
+stress <options>
+
+-c N -> 消耗CPU的选项，产生N个进程，每个进程都反复不停地用sqrt函数计算由rand函数产生的随机数的平方根实现
+-i N -> 消耗io资源的选项，产生N个进程，每个进程都反复调用sync函数将内存上的内容写到硬盘
+-m N -> 消耗内存资源，产生N个进程，每个进程都不断地分配和释放内存
+–vm-bytes B -> 
+–vm-stride B -> 
+–vm-hang N -> 
+–vm-keep -> 
+-d, --hadd N -> 
+–hadd-bytes B -> 
+-t, --timeout N -> 
+–backoff N -> 
+-q, --quiet -> 
+-n, --dry-run -> 
+–version -> 
+-v, --verbose -> 
